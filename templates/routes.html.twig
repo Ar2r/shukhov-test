@@ -1,0 +1,15 @@
+<div><label>Current role: <b>{{ role|default('Not Defined') }}</b></label></div>
+<label>Avaliable roles:</b></label>
+<div>
+    {% for role in roles%}
+	<a href="/route/{{ role.name }}">{{ role.name }}</a>
+    {% endfor %}
+</div>
+<label>Routes:</b></label>
+<div>
+    {% for route in routes%}
+	<div>
+	    <a>{{ route.path }}</a>
+	</div>
+    {% endfor %}
+</div>
